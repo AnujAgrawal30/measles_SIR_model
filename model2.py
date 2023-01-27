@@ -16,8 +16,8 @@ I_data = np.array([1, 0, 12, 6, 4, 3, 4, 7, 3, 7, 3, 3, 5, 7, 5, 0, 3, 1, 6, 5, 
 # The SIR model differential equations.
 def deriv(y, t, N, beta, gamma):
     S, I, R = y
-    dSdt = -beta * S * I / N
-    dIdt = beta * S * I / N - gamma * I
+    dSdt = -beta * I * S / N
+    dIdt = beta * I * S / N - gamma * I
     dRdt = gamma * I
     return dSdt, dIdt, dRdt
 
